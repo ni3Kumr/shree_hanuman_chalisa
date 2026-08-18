@@ -1,0 +1,4 @@
+/* Warm reddish-orange text palette with accessible contrast on cream. */
+body { color: var(--ink); }
+.hero h1, .page h1 { color: var(--ink); }
+.hero-copy, .page p, .reading header p:last-child, .site-footer { color: var(--muted); }

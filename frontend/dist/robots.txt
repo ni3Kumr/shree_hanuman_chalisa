@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hanumanchalisa.example/sitemap-index.xml

@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import hanumanHero from '../assets/hanuman-chalisa-hero.png';
+---
+<section class="hero" aria-labelledby="page-title">
+  <div class="hero-content">
+    <p class="eyebrow">॥ श्री राम जय राम जय जय राम ॥</p>
+    <h1 id="page-title">श्री हनुमान<br />चालीसा</h1>
+    <p class="hero-copy">श्रद्धा और एकाग्रता के साथ गोस्वामी तुलसीदास विरचित पावन पाठ पढ़ें।</p>
+    <a class="read-link" href="#chalisa">पाठ आरम्भ करें <span aria-hidden="true">↓</span></a>
+  </div>
+  <div class="hero-image">
+    <Image src={hanumanHero} alt="भगवान हनुमान की दिव्य कलाकृति, श्री हनुमान चालीसा के शीर्षक के साथ" widths={[640, 960, 1440]} sizes="(max-width: 650px) 100vw, (max-width: 1024px) 52vw, 620px" format="webp" quality={82} loading="eager" fetchpriority="high" />
+  </div>
+</section>

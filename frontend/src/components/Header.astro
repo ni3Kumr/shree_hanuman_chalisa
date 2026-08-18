@@ -1,0 +1,43 @@
+---
+const links = [
+  ['/', 'चालीसा'],
+  ['/meaning', 'अर्थ'],
+  ['/aarti', 'आरती']
+];
+---
+<header class="site-header">
+  <a class="brand" href="/" aria-label="श्री हनुमान चालीसा — मुखपृष्ठ">श्री हनुमान चालीसा</a>
+  <div class="header-actions">
+    <nav aria-label="मुख्य नेविगेशन">
+      {links.map(([href, label]) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+      <span class="theme-toggle__icon" aria-hidden="true">☀️</span>
+    </button>
+  </div>
+</header>
+
+<script is:inline>
+  (() => {
+    const root = document.documentElement;
+    const button = document.querySelector('.theme-toggle');
+    if (!button) return;
+
+    const updateTheme = (theme) => {
+      root.setAttribute('data-theme', theme);
+      const isDark = theme === 'dark';
+      button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      button.setAttribute('aria-pressed', String(isDark));
+      button.querySelector('.theme-toggle__icon').textContent = isDark ? '🌙' : '☀️';
+    };
+
+    const currentTheme = root.getAttribute('data-theme') || 'light';
+    updateTheme(currentTheme);
+
+    button.addEventListener('click', () => {
+      const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', nextTheme);
+      updateTheme(nextTheme);
+    });
+  })();
+</script>

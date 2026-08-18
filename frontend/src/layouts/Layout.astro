@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import '../styles/colors.css';
+interface Props { title: string; description: string; canonical?: string; }
+const { title, description, canonical = Astro.url.pathname } = Astro.props;
+const url = new URL(canonical, Astro.site);
+---
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href={url} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      (() => {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+    <meta property="og:type" content="website" /><meta property="og:title" content={title} />
+    <meta property="og:description" content={description} /><meta property="og:url" content={url} />
+    <meta name="twitter:card" content="summary" /><meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body><a class="skip-link" href="#main">मुख्य पाठ पर जाएँ</a><slot /></body>
+</html>

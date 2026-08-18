@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const title = 'Terms & Conditions | श्री हनुमान चालीसा';
+const description = 'श्री हनुमान चालीसा वेबसाइट के उपयोग के नियम और शर्तें।';
+---
+<Layout {title} {description}>
+  <Header />
+  <main id="main" class="page">
+    <p class="eyebrow">Terms &amp; Conditions</p>
+    <h1>नियम और शर्तें</h1>
+    <p>इस वेबसाइट का उपयोग करके आप इन नियमों से सहमत होते हैं।</p>
+    <section><h2>उपयोग</h2><p>वेबसाइट की सामग्री व्यक्तिगत, गैर-व्यावसायिक और भक्तिमय पठन के लिए उपलब्ध है। सामग्री का उपयोग सम्मानपूर्वक करें और उसे भ्रामक रूप में प्रस्तुत न करें।</p></section>
+    <section><h2>परिवर्तन</h2><p>साइट की सामग्री, सुविधाएँ और ये नियम समय-समय पर बिना पूर्व सूचना के बदले जा सकते हैं।</p></section>
+    <section><h2>संपर्क</h2><p>किसी सामग्री-संबंधी सुझाव या सुधार के लिए वेबसाइट के स्वामी से संपर्क करें।</p></section>
+  </main>
+  <Footer />
+</Layout>

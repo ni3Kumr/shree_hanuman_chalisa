@@ -1,0 +1,12 @@
+---
+import { getEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro'; import Header from '../components/Header.astro'; import Hero from '../components/Hero.astro'; import Chalisa from '../components/Chalisa.astro'; import Footer from '../components/Footer.astro';
+const chalisa = await getEntry('chalisa', 'hanuman-chalisa');
+const title = 'Hanuman Chalisa in Hindi | श्री हनुमान चालीसा';
+const description = 'श्री हनुमान चालीसा का शुद्ध हिंदी पाठ — दोहा, चालीसा और समापन दोहा एक शांत, सरल पाठ-अनुभव में।';
+const schema = { '@context': 'https://schema.org', '@type': 'WebPage', name: title, description, inLanguage: 'hi-IN' };
+---
+<Layout {title} {description}>
+  <Header /><main id="main"><Hero /><Chalisa entry={chalisa} /></main><Footer />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+</Layout>

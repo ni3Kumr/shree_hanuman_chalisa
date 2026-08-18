@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="hi"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="यह पृष्ठ उपलब्ध नहीं है।"><meta name="robots" content="index,follow"><link rel="canonical" href="https://hanumanchalisa.example/404/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script>
+      (() => {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script><meta property="og:type" content="website"><meta property="og:title" content="पृष्ठ नहीं मिला | श्री हनुमान चालीसा"><meta property="og:description" content="यह पृष्ठ उपलब्ध नहीं है।"><meta property="og:url" content="https://hanumanchalisa.example/404/"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="पृष्ठ नहीं मिला | श्री हनुमान चालीसा"><meta name="twitter:description" content="यह पृष्ठ उपलब्ध नहीं है।"><title>पृष्ठ नहीं मिला | श्री हनुमान चालीसा</title><link rel="stylesheet" href="/_astro/aarti.YprRnSWc.css"></head> <body><a class="skip-link" href="#main">मुख्य पाठ पर जाएँ</a><header class="site-header"> <a class="brand" href="/" aria-label="श्री हनुमान चालीसा — मुखपृष्ठ">श्री हनुमान चालीसा</a> <div class="header-actions"> <nav aria-label="मुख्य नेविगेशन"> <a href="/">चालीसा</a><a href="/meaning">अर्थ</a><a href="/aarti">आरती</a> </nav> <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false"> <span class="theme-toggle__icon" aria-hidden="true">☀️</span> </button> </div> </header> <script>
+  (() => {
+    const root = document.documentElement;
+    const button = document.querySelector('.theme-toggle');
+    if (!button) return;
+
+    const updateTheme = (theme) => {
+      root.setAttribute('data-theme', theme);
+      const isDark = theme === 'dark';
+      button.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      button.setAttribute('aria-pressed', String(isDark));
+      button.querySelector('.theme-toggle__icon').textContent = isDark ? '🌙' : '☀️';
+    };
+
+    const currentTheme = root.getAttribute('data-theme') || 'light';
+    updateTheme(currentTheme);
+
+    button.addEventListener('click', () => {
+      const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('theme', nextTheme);
+      updateTheme(nextTheme);
+    });
+  })();
+</script><main id="main" class="page not-found"><p class="eyebrow">४०४</p><h1>यह पृष्ठ नहीं मिला</h1><p>कृपया पावन पाठ के मुखपृष्ठ पर लौटें।</p><a class="read-link" href="/">हनुमान चालीसा पढ़ें</a></main><footer class="site-footer"> <p>॥ श्री राम जय राम जय जय राम ॥</p> <nav aria-label="फुटर नेविगेशन"> <a href="/">हनुमान चालीसा</a><a href="/meaning">अर्थ</a><a href="/aarti">आरती</a> <a href="/about">हमारे बारे में</a><a href="/disclaimer">अस्वीकरण</a><a href="/terms">नियम व शर्तें</a> </nav> <small>पाठ को श्रद्धा और शांति से पढ़ें।</small> </footer></body></html>
